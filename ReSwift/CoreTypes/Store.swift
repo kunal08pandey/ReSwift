@@ -17,7 +17,7 @@ open class Store<State>: StoreType {
 
     typealias SubscriptionType = SubscriptionBox<State>
 
-    private(set) public var state: State! {
+   public var state: State! {
         didSet {
             subscriptions.forEach {
                 if $0.subscriber == nil {
